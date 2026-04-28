@@ -1,0 +1,21 @@
+#!/bin/bash
+
+DOTFILES_DIR="$HOME/setup"
+
+case "$1" in
+    install) # install locally
+        "$DOTFILES_DIR/install.sh"
+        ;;
+    update) # update local 
+        "$DOTFILES_DIR/update.sh"
+        ;;
+    upload) # make a new backup
+        "$DOTFILES_DIR/upload.sh"
+        ;;
+    *)
+        echo "Uso:"
+        echo "  dot install   → aplica as configurações do perfil"
+        echo "  dot update    → resgata o perfil do github"
+        echo "  dot upload    → salvar configs locais no github"
+        ;;
+esac
