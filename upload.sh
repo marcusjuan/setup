@@ -106,7 +106,7 @@ git push origin main
 echo "------ Remote Profile ------ done."
 
 echo "------ Remote Profile ------ committing to projetos_ip..."
-cd "$HOME/projects/projetos_ip"
+cd "$HOME/projetos/projetos_ip"
 git add .
 git commit --allow-empty -m "update: configs $(date)" --quiet || echo "------ Remote Profile ------ nothing to commit"
 git push origin main
